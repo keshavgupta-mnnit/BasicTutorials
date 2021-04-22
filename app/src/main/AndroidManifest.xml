@@ -18,6 +18,7 @@
         </activity>
         <activity android:name=".lifecycle.FirstActivity" />
         <activity android:name=".lifecycle.SecondActivity" />
+        <activity android:name=".threads.ThreadActivity" />
     </application>
 
 </manifest>

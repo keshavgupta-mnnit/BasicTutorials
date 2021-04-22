@@ -3,9 +3,7 @@ package com.keshav.basictutorials
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.keshav.basictutorials.lifecycle.FirstActivity
-import com.keshav.basictutorials.lifecycle.Message
-import com.keshav.basictutorials.lifecycle.SecondActivity
+import com.keshav.basictutorials.threads.ThreadActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun launchLifeCycleExample() {
-        val intent = Intent(this, FirstActivity::class.java)
+        val intent = Intent(this, ThreadActivity::class.java)
         startActivity(intent)
     }
 }
