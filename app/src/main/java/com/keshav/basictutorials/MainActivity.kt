@@ -1,9 +1,9 @@
 package com.keshav.basictutorials
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.keshav.basictutorials.async.AsyncActivity
+import androidx.appcompat.app.AppCompatActivity
+import com.keshav.basictutorials.multithreading.asyncloader.AsyncLoaderActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun launchLifeCycleExample() {
-        val intent = Intent(this, AsyncActivity::class.java)
+        val intent = Intent(this, AsyncLoaderActivity::class.java)
         startActivity(intent)
     }
 }

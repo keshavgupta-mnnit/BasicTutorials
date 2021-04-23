@@ -1,4 +1,4 @@
-package com.keshav.basictutorials.async
+package com.keshav.basictutorials.multithreading.async
 
 import android.content.Context
 import android.os.AsyncTask
@@ -14,19 +14,21 @@ class AsyncFragment : Fragment() {
         retainInstance = true
     }
 
-    interface TaskHandler{
-        fun handleTask(msg : String)
+    interface TaskHandler {
+        fun handleTask(msg: String)
     }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
         Log.d(TAG, "onAttach: Fragment Attached")
-        if(context is TaskHandler){
+
+//        For holding the current context of activity in case it is destroyed and created on screen rotation
+        if (context is TaskHandler) {
             mtaskHandler = context
         }
     }
 
-    fun performDownload(vararg params: String?){
+    fun performDownload(vararg params: String?) {
         val myTask = MyTask()
         myTask.execute(*params)
     }
@@ -34,7 +36,7 @@ class AsyncFragment : Fragment() {
     inner class MyTask : AsyncTask<String, String, String>() {
         override fun doInBackground(vararg params: String?): String {
             for (value in params) {
-                if(isCancelled){
+                if (isCancelled) {
                     publishProgress("Cancelled")
                     break
                 }
