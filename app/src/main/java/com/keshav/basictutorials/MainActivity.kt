@@ -3,7 +3,7 @@ package com.keshav.basictutorials
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.keshav.basictutorials.threads.ThreadActivity
+import com.keshav.basictutorials.async.AsyncActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun launchLifeCycleExample() {
-        val intent = Intent(this, ThreadActivity::class.java)
+        val intent = Intent(this, AsyncActivity::class.java)
         startActivity(intent)
     }
 }
