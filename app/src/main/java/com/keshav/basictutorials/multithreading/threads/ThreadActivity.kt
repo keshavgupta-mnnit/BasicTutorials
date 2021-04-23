@@ -1,4 +1,4 @@
-package com.keshav.basictutorials.threads
+package com.keshav.basictutorials.multithreading.threads
 
 import android.os.Bundle
 import android.os.Handler
@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_thread.*
 class ThreadActivity : AppCompatActivity() {
     val TAG = "ThreadExample"
     private val message = "Running Thread"
-    lateinit var downloadMessageHandlerThread: DownloadMessageHandlerThread
+    private lateinit var downloadMessageHandlerThread: DownloadMessageHandlerThread
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_thread)

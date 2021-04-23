@@ -18,7 +18,10 @@
         </activity>
         <activity android:name=".lifecycle.FirstActivity" />
         <activity android:name=".lifecycle.SecondActivity" />
-        <activity android:name=".threads.ThreadActivity" />
+        <activity android:name="com.keshav.basictutorials.multithreading.threads.ThreadActivity" />
+        <activity android:name="com.keshav.basictutorials.multithreading.async.AsyncActivity" />
+        <activity android:name="com.keshav.basictutorials.multithreading.threadexecutor.ThreadExecutorActivity" />
+        <activity android:name=".multithreading.asyncloader.AsyncLoaderActivity"/>
     </application>
 
 </manifest>
