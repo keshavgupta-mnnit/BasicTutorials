@@ -4,14 +4,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.keshav.basictutorials.R
+import kotlinx.android.synthetic.main.activity_second.*
 
 class SecondActivity : AppCompatActivity() {
     private val TAG = "LifeCycleExample"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
-        Log.d(TAG, "SA - onCreate")
+        val msg: Message? = intent.extras?.getParcelable("dt")
+        msg?.let { tv_second.text = it.msg }
 
+        Log.d(TAG, "SA - onCreate ${SecondActivity::class.java.canonicalName}")
     }
 
     override fun onStart() {
